@@ -55,7 +55,6 @@ heroImg.addEventListener('error', () => {
   document.getElementById('hero').classList.add('hero-no-image');
   heroImg.style.display = 'none';
 });
-// Handle cached image that already loaded before JS ran
 if (heroImg.complete && heroImg.naturalWidth > 0) heroImg.classList.add('loaded');
 
 // =============================================================
@@ -70,7 +69,6 @@ menuBtn.addEventListener('click', () => {
   menuBtn.setAttribute('aria-expanded', String(open));
 });
 
-// Close mobile nav on any nav link click
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
@@ -92,8 +90,9 @@ window.addEventListener('scroll', () => {
 // =============================================================
 const galleryEl    = document.getElementById('gallery');
 const galleryEmpty = document.getElementById('gallery-empty');
+const portfolioSection = document.getElementById('portfolio');
 
-// Intersection Observer for lazy loading images below the fold
+// Intersection Observer for lazy loading
 const imgObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
@@ -135,7 +134,6 @@ function buildGallery(filter) {
       img.alt = `${label} photo ${i}`;
       img.decoding = 'async';
 
-      // Eagerly load the first few visible images; lazily load the rest
       if (i <= 6) {
         img.src = src;
       } else {
@@ -176,7 +174,6 @@ function buildGallery(filter) {
     }
   });
 
-  // If no images were configured at all
   if (pending === 0) galleryEmpty.hidden = false;
 }
 
@@ -193,7 +190,6 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-// Initial gallery load
 buildGallery('all');
 
 // =============================================================
@@ -206,11 +202,10 @@ const lightboxPrev     = document.getElementById('lightbox-prev');
 const lightboxNext     = document.getElementById('lightbox-next');
 const lightboxBackdrop = document.getElementById('lightbox-backdrop');
 
-let lbImages = []; // [{ src, alt }] — built at open time from loaded images
+let lbImages = [];
 let lbIndex  = 0;
 
 function openLightbox(clickedItem) {
-  // Build list of currently-loaded images in gallery order
   lbImages = Array.from(galleryEl.querySelectorAll('.gallery-item'))
     .map(item => {
       const img = item.querySelector('img');
@@ -220,7 +215,6 @@ function openLightbox(clickedItem) {
 
   if (lbImages.length === 0) return;
 
-  // Find the clicked image
   const clickedImg = clickedItem.querySelector('img');
   const idx = lbImages.findIndex(i => i.src === clickedImg?.src);
   lbIndex = idx >= 0 ? idx : 0;

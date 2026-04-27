@@ -30,7 +30,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -50,10 +50,8 @@
 
       <div class="nav-controls">
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode" title="Toggle theme">
-          <!-- Sun icon (shown in dark mode — click to go light) -->
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <!-- Moon icon (shown in light mode — click to go dark) -->
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
         <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
           <span aria-hidden="true"></span>
@@ -72,18 +70,23 @@
     </div>
     <div class="hero-content">
       <p class="hero-eyebrow">Gainesville, FL</p>
-      <h1 class="hero-title">Concerts. Campus&nbsp;Events.<br />Sports. Portraits.</h1>
-      <p class="hero-sub">Gainesville-based student photographer covering live music,<span class="br-desktop"><br /></span> organizations, athletics, and portraits.</p>
+      <h1 class="hero-title">Concerts.<br /><em>Campus Events.</em><br />Sports. Portraits.</h1>
+      <p class="hero-sub">Student photographer based in Gainesville — covering live music, organizations, athletics, and portraits.</p>
       <div class="hero-cta">
         <a href="#portfolio" class="btn btn-light">View Portfolio</a>
         <a href="#contact" class="btn btn-ghost-light">Book a Shoot</a>
       </div>
     </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
   </section>
 
   <!-- ===================== PORTFOLIO ===================== -->
-  <section id="portfolio" class="section" aria-labelledby="portfolio-heading">
+  <section id="portfolio" aria-labelledby="portfolio-heading">
     <div class="section-header">
+      <p class="section-eyebrow">Work</p>
       <h2 id="portfolio-heading" class="section-title">Portfolio</h2>
     </div>
 
@@ -101,8 +104,9 @@
 
   <!-- ===================== SERVICES ===================== -->
   <section id="services" class="services-outer" aria-labelledby="services-heading">
-    <div class="section services-inner">
+    <div class="services-inner">
       <div class="section-header">
+        <p class="section-eyebrow">Offerings</p>
         <h2 id="services-heading" class="section-title">Services</h2>
         <p class="section-sub">Professional coverage, fast turnaround.</p>
       </div>
@@ -168,13 +172,14 @@
   <!-- ===================== CONTACT ===================== -->
   <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
     <div class="contact-inner">
-      <h2 id="contact-heading" class="contact-title">Let's Work Together</h2>
-      <p class="contact-sub">Need coverage for an event, concert, game, or portrait session?</p>
+      <p class="contact-label">Get in touch</p>
+      <h2 id="contact-heading" class="contact-title">Let's Work<br /><em>Together</em></h2>
+      <p class="contact-sub">Need coverage for an event, concert, game, or portrait session? Reach out and let's make it happen.</p>
       <div class="contact-actions">
         <a href="mailto:jackson@photosbyjackson.org" class="btn btn-primary">Get in Touch</a>
         <a href="https://instagram.com/photosbyjackson" class="btn btn-outline" target="_blank" rel="noopener noreferrer">@photosbyjackson</a>
       </div>
-      <p class="contact-note">Pricing depends on event length, location, and deliverables. All packages include professionally edited digital images.</p>
+      <p class="contact-note">All packages include professionally edited digital images.<br/>Pricing depends on event length, location, and deliverables.</p>
     </div>
   </section>
 
