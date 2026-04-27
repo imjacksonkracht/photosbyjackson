@@ -22,8 +22,7 @@
   <script>
     (function () {
       var s = localStorage.getItem('pbj-theme');
-      var d = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.dataset.theme = s || d;
+      document.documentElement.dataset.theme = s || 'light';
     })();
   </script>
 
@@ -69,17 +68,13 @@
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Gainesville, FL</p>
-      <h1 class="hero-title">Concerts.<br /><em>Campus Events.</em><br />Sports. Portraits.</h1>
+      <p class="hero-eyebrow">Photos by Jackson — Gainesville, FL</p>
+      <h1 class="hero-title">Concerts.<br />Campus Events.<br />Portraits.</h1>
       <p class="hero-sub">Student photographer based in Gainesville — covering live music, organizations, athletics, and portraits.</p>
       <div class="hero-cta">
-        <a href="#portfolio" class="btn btn-light">View Portfolio</a>
-        <a href="#contact" class="btn btn-ghost-light">Book a Shoot</a>
+        <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+        <a href="#contact" class="btn btn-outline">Book a Shoot</a>
       </div>
-    </div>
-    <div class="hero-scroll" aria-hidden="true">
-      <div class="hero-scroll-line"></div>
-      <span>Scroll</span>
     </div>
   </section>
 
@@ -119,8 +114,8 @@
           <h3 class="service-title">Concerts &amp; Live Music</h3>
           <p class="service-desc">High-energy coverage capturing the atmosphere, the crowd, and the performance.</p>
           <ul class="service-details">
-            <li>Starting at $100</li>
-            <li>24–48 hour turnaround</li>
+            <li>Starting at $75</li>
+            <li>48–72 hour turnaround</li>
             <li>Edited digital gallery delivery</li>
           </ul>
         </article>
@@ -132,34 +127,21 @@
           <h3 class="service-title">Campus Organizations &amp; Events</h3>
           <p class="service-desc">Professional coverage for student orgs, club events, Greek life, and campus gatherings.</p>
           <ul class="service-details">
-            <li>Starting at $100</li>
+            <li>Starting at $30</li>
             <li>24–48 hour turnaround</li>
             <li>Edited digital gallery delivery</li>
           </ul>
         </article>
 
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20A14.5 14.5 0 0 0 12 2"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-          </div>
-          <h3 class="service-title">Sports</h3>
-          <p class="service-desc">Dynamic coverage capturing peak action moments from games, matches, and athletic events.</p>
-          <ul class="service-details">
-            <li>Starting at $100</li>
-            <li>24–48 hour turnaround</li>
-            <li>Edited digital gallery delivery</li>
-          </ul>
-        </article>
-
-        <article class="service-card">
+<article class="service-card">
           <div class="service-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <h3 class="service-title">Portraits &amp; Headshots</h3>
-          <p class="service-desc">Clean, professional portraits for individuals, LinkedIn headshots, and creative sessions.</p>
+          <h3 class="service-title">Headshots</h3>
+          <p class="service-desc">Clean, professional headshots for LinkedIn, resumes, and personal branding.</p>
           <ul class="service-details">
-            <li>Starting at $100</li>
-            <li>24–48 hour turnaround</li>
+            <li>Starting at $15</li>
+            <li>24–36 hour turnaround</li>
             <li>Edited digital gallery delivery</li>
           </ul>
         </article>
@@ -174,10 +156,10 @@
     <div class="contact-inner">
       <p class="contact-label">Get in touch</p>
       <h2 id="contact-heading" class="contact-title">Let's Work<br /><em>Together</em></h2>
-      <p class="contact-sub">Need coverage for an event, concert, game, or portrait session? Reach out and let's make it happen.</p>
+      <p class="contact-sub">Need coverage for a concert, campus event, or headshot session? Reach out and let's make it happen.</p>
       <div class="contact-actions">
         <a href="mailto:jackson@photosbyjackson.org" class="btn btn-primary">Get in Touch</a>
-        <a href="https://instagram.com/photosbyjackson" class="btn btn-outline" target="_blank" rel="noopener noreferrer">@photosbyjackson</a>
+        <a href="https://instagram.com/wpgraphicz" class="btn btn-outline" target="_blank" rel="noopener noreferrer">@WPGraphicz</a>
       </div>
       <p class="contact-note">All packages include professionally edited digital images.<br/>Pricing depends on event length, location, and deliverables.</p>
     </div>
@@ -189,7 +171,7 @@
       <p class="footer-logo">Photos by Jackson</p>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="https://jacksonkracht.com" target="_blank" rel="noopener noreferrer">Personal Site</a>
-        <a href="https://instagram.com/photosbyjackson" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://instagram.com/wpgraphicz" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="mailto:jackson@photosbyjackson.org">Contact</a>
       </nav>
       <p class="footer-copy">&copy; <span id="footer-year"></span> Photos by Jackson</p>

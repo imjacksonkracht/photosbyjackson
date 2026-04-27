@@ -28,7 +28,7 @@ const CONFIG = {
   },
   contact: {
     email:        'jackson@photosbyjackson.org',
-    instagram:    'https://instagram.com/photosbyjackson',
+    instagram:    'https://instagram.com/wpgraphicz',
     personalSite: 'https://jacksonkracht.com',
   },
 };
